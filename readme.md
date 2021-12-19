@@ -8,7 +8,7 @@ Dokumentacja ogólna.
 
 # Projekt układu elektronicznego z wykorzystaniem mikrokontrolera Arduino
 
-## Etap 1
+## Wprowadzenie
 
 -   Temat projektu:
     Sterowanie silnikiem DC z wykorzystaniem mostka H.
