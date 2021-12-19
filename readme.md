@@ -1,6 +1,6 @@
-Dokumentacja ogólna.
+Dokumentacja ogólna
 
-# hardware
+# Hardware
 
 ![img](./Arduino_Uno.jpg)
 ![img](./Silnik_DC.jpg)
@@ -16,6 +16,7 @@ Dokumentacja ogólna.
 -   Opis: 
     Mostek H zbudowany na tranzystorach bipolarnych 2N2222.
     Sygnały PWM podam na bramki tranzystorów, sterowanie obrotami z potencjometru.
+    Diody które pokazałem na schemacie nie zostaną zastosowane. Nie jest to wymagane.
 
     ![img](./schemat_4tranz.jpg)
 
@@ -30,7 +31,7 @@ Dokumentacja ogólna.
     potencjometr, 
     przewody.
 
-Fragment kodu
+Fragment kodu:
 
 ```cpp
 //pracuje nad tym
