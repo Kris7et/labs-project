@@ -31,7 +31,7 @@ Dokumentacja ogólna
     potencjometr, 
     przewody.
 
-Wszytkie wymagane elementy udało już mi się zakupić.
+Wszystkie wymagane elementy udało już mi się zakupić.
 
 Fragment kodu:
 
