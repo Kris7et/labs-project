@@ -2,10 +2,10 @@ Dokumentacja ogólna.
 
 # hardware
 
-![img](./schemat-4tranz.png)
-![img](./1e.jpg)
-![img](./2e.jpg)
-![img](./3e.jpg)
+![img](./schemat_4tranz.jpg)
+![img](./Arduino_Uno.jpg)
+![img](./Silnik_DC.jpg)
+![img](./Pozostale_Elementy.jpg)
 
 # Projekt układu elektronicznego z wykorzystaniem mikrokontrolera Arduino
 
@@ -18,19 +18,19 @@ Dokumentacja ogólna.
     Mostek H zbudowany na tranzystorach bipolarnych 2N2222.
     Sygnały PWM podam na bramki tranzystorów, sterowanie obrotami z potencjometru.
 
--   Lista elementów:
-    Arduino UNO
-    płytka stykowa
-    silnik DC 1,5V-3V
-    źródło zasialania (baterie 9V)
-    rezystory 1k
-    tranzystory 2N2222
-    guzik
-    potencjometr
-    przewody
+-   Lista elementów: 
+    Arduino UNO, 
+    płytka stykowa, 
+    silnik DC 1,5V-3V, 
+    źródło zasialania (baterie 9V), 
+    rezystory 1k, 
+    tranzystory 2N2222, 
+    przycisk, 
+    potencjometr, 
+    przewody.
 
 Fragment kodu
 
 ```cpp
-//roboczy
+//pracuje nad tym
 ```
