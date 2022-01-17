@@ -31,13 +31,54 @@ Dokumentacja ogólna
     potencjometr, 
     przewody.
 
-Wszystkie wymagane elementy udało już mi się zakupić.
+W projekcie pokażę, jak osiągnąć kontrolę prędkości i kierunku silnika 
+prądu stałego za pomocą Arduino UNO.
+
+Silniki prądu stałego znajdują się wszędzie: w elektronice, zabawkach, 
+wentylatorach, narzędziach, tarczach, pompach itp. Silnik prądu stałego jest 
+elementem wykonawczym, który przekształca zasilanie prądem stałym na 
+obrót lub ruch.
+Istnieją różne rodzaje silników prądu stałego: Szczotkowy silnik prądu 
+stałego, bezszczotkowy silnik prądu stałego, przekładniowy silnik prądu 
+stałego, serwomotor, silnik krokowy i liniowy element wykonawczy prądu 
+stałego.
+Różne typy silników są wykorzystywane w różnych zastosowaniach, takich 
+jak robotyka, precyzyjne pozycjonowanie, automatyka przemysłowa itp.
+
+Opis komponentów:
+Arduino Uno - Jest to płytka prototypowa oparta na mikrokontrolerze. 
+Mikrokontroler zastosowany na płytce Arduino Uno to ATmega328p. 
+Arduino jest odpowiedzialne za sterowanie prędkością i kierunkiem obrotów 
+silnika za pomocą innych komponentów.
+2N2222 - Jest to tranzystor NPN o prądzie wyjściowym 800 mA. 
+Maksymalny prąd wyjściowy, który jest dostępny z pinów I/O Arduino 
+wynosi 50 mA, co nie jest wystarczające do napędzenia silnika. W związku 
+z tym zastosowano cztery tranzystory o dużej wydajności prądowej.
 
 ## Wykonanie
 
 ![img](./zdj1.jpg)
 ![img](./zdj2.jpg)
 ![img](./zdj3.jpg)
+
+Działanie:
+Celem tego projektu jest kontrola prędkości i kierunku silnika prądu stałego 
+bez użycia układu scalonego sterownika silnika. W związku z tym musimy 
+utworzyć mostek H z tranzystorów, aby napędzać silnik. 
+POT jest podłączony do pinu analogowego A0 układu Arduino. Służy on do 
+regulacji prędkości obrotowej silnika. Normalna praca silnika polega na 
+obracaniu się w kierunku naprzód.
+Kiedy przycisk, który jest podłączony do pinu 7 Arduino, zostanie 
+aktywowany lub naciśnięty, kierunek obrotu zostanie odwrócony i będzie 
+się obracał w tym kierunku, dopóki przycisk nie zostanie naciśnięty 
+ponownie.
+Aby silnik obracał się do przodu, tranzystory Q2 i Q3 muszą być włączone. 
+Stąd na wyjściach 5 i 4 Arduino jest stan wysoki.
+Arduino jest zaprogramowane tak, aby wykrywać logiczny stan niski na 
+pinie 7, gdy przycisk jest wciśnięty. Gdy przycisk zostanie wciśnięty raz, 
+tranzystory Q1 i Q4 muszą zostać włączone. Stąd piny 3 i 2 Arduino są 
+ustawione w stan wysoki. Silnik obraca się w odwrotnym kierunku, jeśli 
+przycisk zostanie wciśnięty ponownie.
 
 Fragment kodu:
 
